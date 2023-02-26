@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include("./partials/head")  %> 
+    <link rel="stylesheet" href="../../css/profileStyles.css">
+</head>
+<body>
+    <%- include("./partials/header")  %>
+    <h1 class="title"><%=user.nombreUsuario%></h1>
+    <div class="containerAll">
+        <section class="sectionImg">
+            <img class="imgProfile" src="images/avatars/<%= user.avatar%>" alt="imgProfile">
+            <p><%= user.nombre + " " + user.apellido %></p>
+        </section>
+        <section class="sectionTxt">
+            <p>Email: <%= user.email  %></p>
+            <p>Telefono: <%= user.telefono  %></p>
+            <p>Dirección: <%= user.direccion  %></p>
+            <p>Pais: <%= user.pais %></p>
+        </section>
+    </div>
+</body>
+</html>

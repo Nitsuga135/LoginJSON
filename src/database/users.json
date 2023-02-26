@@ -1,0 +1,26 @@
+[
+ {
+  "id": 0,
+  "nombreUsuario": "Nitsuga",
+  "contrasena": "$2a$10$qhKZhgUoGG793rg0K.JBeePaR2L9/b6INDz00UQvvEWp12Nqzm9sW",
+  "nombre": "Agustin",
+  "apellido": "Giraldez",
+  "telefono": "1140531232",
+  "direccion": "calle Falsa 123",
+  "email": "email@gmail.com",
+  "pais": "Argentina",
+  "avatar": "imgAvatar-1676863800324.jpg"
+ },
+ {
+  "id": 1,
+  "nombreUsuario": "Gabri",
+  "contrasena": "$2a$10$0gM4wfFgDtEL0JF5dKh73e7.m9EKJzJMAOGKk7.NUscRccjDe3t6u",
+  "nombre": "Gabriela",
+  "apellido": "Garcia",
+  "telefono": "1523242152",
+  "direccion": "calle falsa 123",
+  "email": "mail@gmail.com",
+  "pais": "Argentina",
+  "avatar": "imgAvatar-1676916312558.jpg"
+ }
+]

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <%- include ("./partials/head.ejs")%>
+    <link rel="stylesheet" href="../../css/createStyles.css">
+</head>
+
+<body>
+    
+    <%- include("./partials/header")  %>
+    <div class="containerAll">
+    <h1 class="titleContainer">
+        <a class="title" href="/">Login Ruteo</a>
+    </h1>
+    <form class="formulario" action="/createAcount" method="POST" enctype="multipart/form-data" >
+        
+        <h2>Crear Cuenta</h2>
+
+        <!--itero los errores que vienen de la ruta si es q existen errores-->
+        
+        <!--<% if (locals.errors) { %>
+         
+            <% for(let oneError in errors){ %> 
+                
+                <p class="text-danger"><%= errors[oneError].msg%></p>
+
+            <% } %> 
+        <% } %>
+        -->
+
+
+        <div>
+            <label for="nombreUsuario">
+                
+                Nombre de Usuario:
+                
+            </label>
+            <input 
+            class="<%= locals.errors && errors.nombreUsuario %>" 
+            type="text" 
+            name="nombreUsuario"
+            value="<%= locals.oldData && oldData.nombreUsuario? oldData.nombreUsuario :null%>">
+            
+            <% if (locals.errors && errors.nombreUsuario ) { %>
+            
+                <p class="text-danger"><%= errors.nombreUsuario.msg  %> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="contrasena:">
+                Contraseña:
+                
+            </label>
+            <input
+            type="password"
+            name="contrasena">
+            <% if (locals.errors && errors.contrasena ) { %>
+            
+                <p class="text-danger"><%= errors.contrasena.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="nombre">
+                Nombre:
+                
+            </label>
+            <input 
+            type="text" 
+            name="nombre"
+            value="<%= locals.oldData ? oldData.nombre :null%>">
+            <% if (locals.errors && errors.nombre ) { %>
+            
+                <p class="text-danger"><%= errors.nombre.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="apellido:">
+                Apellido:
+               
+            </label>
+            <input
+            type="text"
+            name="apellido"
+            value="<%= locals.oldData ? oldData.apellido :null%>">
+            <% if (locals.errors && errors.apellido ) { %>
+            
+                <p class="text-danger"><%= errors.apellido.msg%></p>
+
+            <% } %> 
+        </div>
+          
+        <div>  
+            <label for="telefono">
+                Teléfono:
+                
+            </label>
+            <input 
+            type="tel" 
+            name="telefono"
+            value="<%= locals.oldData ? oldData.telefono :null%>">
+            <% if (locals.errors && errors.telefono ) { %>
+            
+                <p class="text-danger"><%= errors.telefono.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="direccion">
+                Dirección:
+            </label>
+            <input 
+            type="text" 
+            name="direccion"
+            value="<%= locals.oldData ? oldData.direccion :null%>">
+            <% if (locals.errors && errors.direccion ) { %>
+            
+                <p class="text-danger"><%= errors.direccion.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="email">
+                Email:
+            </label>
+            <input 
+            type="email"
+            name="email"
+            value="<%= locals.oldData ? oldData.email :null%>">
+            <% if (locals.errors && errors.email ) { %>
+            
+                <p class="text-danger"><%= errors.email.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="avatar">
+                Avatar:
+            </label>
+            <input 
+            class="file" 
+            type="file" 
+            name="avatar"
+            value="<%= locals.oldData ? oldData.avatar :null%>">
+            <% if (locals.errors && errors.avatar ) { %>
+            
+                <p class="text-danger"><%= errors.avatar.msg%> </p>
+
+            <% } %> 
+        </div>
+        <div>
+            <label for="pais">País de nacimiento</label>
+              <% 
+                    let countries = ["Argentina", "Brazil","Chile ", "Paraguay"]; 
+                %> 
+            <select name="pais">
+                <option value="">Elegi un país</option>
+              
+                <% for(const oneCountry of countries) { %>  
+                    <option
+                        value="<%=oneCountry%>"
+                        <%= locals.oldData && (oneCountry === oldData.pais) ? "selected" :null%>> 
+                        
+                        <%= oneCountry %>
+                                          
+                    </option>
+                <% } %>
+                
+                
+            </select>
+            <% if (locals.errors && errors.pais ) { %>
+            
+                    <p class="text-danger"><%= errors.pais.msg%> </p>
+    
+            <% } %> 
+        </div>
+        <a class="loginButton" href="./login">Iniciar Sesion</a>
+        <button type="submit">Crear cuenta</button>
+    </form>
+    </div>
+</body>
+</html>
