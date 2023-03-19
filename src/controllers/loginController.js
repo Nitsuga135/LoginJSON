@@ -55,30 +55,18 @@ const controller = {
 
                         res.redirect("/profile");
 
-                    }else{
-                        return res.render("login",
-                            {errors: { 
-                                email: {
-                                    msg: "Credenciales invalidas"
-                                }
-                            }
-                        })
                     }
+                }   
 
-                }else{
-                    
-                    //si el email no existe en la base de datos
-                    return res.render("login",
-                        {errors: { 
-                            email: {
-                                msg: "Credenciales invalidas"
-                            }
+                //si el email o contrasena no existe en la base de datos
+                return res.render("login",
+                    {errors: { 
+                        email: {
+                            msg: "Credenciales invalidas"
                         }
-                    })
-                }
-
-
-                
+                    }
+                })
+                                
         }
     },
     logOut: function(req, res){

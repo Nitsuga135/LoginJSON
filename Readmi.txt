@@ -1,0 +1,6 @@
+Sitio login:
+Este sitio fue hecho con la finalidad de crear un sistema de ruteo 
+y base de datos en la que una persona pudiera entrar, loguearse y 
+quedar registrada dentro de una base de datos mysql. Por este motivo 
+los diseños de las páginas no fueron realizados en movile first ni
+tienen un diseño complejo.

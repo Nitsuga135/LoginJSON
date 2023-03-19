@@ -67,6 +67,31 @@ button a{
     text-decoration: none;
     color: black;
     border-bottom:1px solid rgba(140, 11, 116, 0.561) ; 
+}[type="checkbox"]{
+    display: none;
+}
+.recordar-container{
+    display: flex;
+    flex-direction: row;
+}
+.recordar{
+    padding-left: 20px;
+    position: relative;
+}
+.recordar::before{
+    content: " ";
+    border: solid 1px #e9e9e9;
+    border-radius: 3px;
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    left: 0px;
 }
 
 
+[type="checkbox"]:checked + .recordar::before{
+    border-color: #00e676;
+    color: #00e676;
+    content: '\f00c';
+    font-family: "FontAwesome";
+}

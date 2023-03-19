@@ -42,11 +42,12 @@ label{
 }
 input{
     height: 22px;
-    width: 100%;
+    width: 200px;
     border: 0 ;
     border-bottom: 1px solid black;
     margin-bottom: 5px;
     background-color: rgb(90, 231, 144);
+    outline: none;
 }
 .title{
 
@@ -87,7 +88,19 @@ select{
 .text-danger{
     color: rgb(252, 0, 0);
     font-size: 18px;
+    text-align: center;
 }
 .is-invalid{
     color:rgb(252, 0, 0)
+}
+.container-password-ojo{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-size: 18px;
+   
+}
+.contrasena{
+    width: 182px;
 }
