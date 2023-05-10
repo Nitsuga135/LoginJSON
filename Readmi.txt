@@ -4,3 +4,10 @@ y base de datos en la que una persona pudiera entrar, loguearse y
 quedar registrada dentro de una base de datos mysql. Por este motivo 
 los diseños de las páginas no fueron realizados en movile first ni
 tienen un diseño complejo.
+##Bienvenido a Ruteo con JSON😄
+**Resumen**
+Este sitio se trata de un sistema de ruteo en el cual el usuario podrá crear un usuario y modificarlo para luego poder verlo en su perfil.
+
+**Instalación**
+Este archivo esta creado con js, ejs, css y express por lo cual una vez descargado deberas correr npm i en el terminal.
+
